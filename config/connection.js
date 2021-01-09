@@ -1,4 +1,3 @@
-const { mkdirSync } = require('fs');
 const express = require('mysql');
 
 const connection = mysql.createConnect({
