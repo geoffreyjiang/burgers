@@ -1,0 +1,14 @@
+<div class="row">
+    <ul>
+        {{#each burgers}}
+        {{#unless devoured}}
+        {{/unless}}
+        {{/each}}
+    </ul>
+</div>
+
+<form id="addBurger">
+    <h2>Add Burger</h2>
+    <input type="text" id="burgerName">
+    <button class="btn" id="burgerBtn">Add Burger</button>
+</form>
