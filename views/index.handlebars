@@ -2,7 +2,6 @@
     <div class="row">
         <div class="col-md-12 text-center">
             <h1>BURGER ME</h1>
-            {{!-- <img src="/assets/img/burger.png" alt="" style="width: 200px" id="burger-image"> --}}
         </div>
     </div>
 
@@ -32,10 +31,10 @@
                 <h2 class ="card-title">Burgers Eaten</h2>
                 <ul class="right-text burgerMenu">
                     {{#each burgers}}
-                    {{#if this.devoured}}
+                    {{#if devoured}}
                     <li class="burgerList">
                         {{burger_name}}
-                         <button class="btn btn-primary delBtn" burgerID="{{id}}" type="button">Throw It Up!</button>
+                        <button class="btn btn-primary delBtn" burgerID="{{id}}" type="button">Delete</button>
                     </li>
                     {{/if}}
                     {{/each}}

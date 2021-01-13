@@ -60,12 +60,12 @@ if (addBtn) {
 			}
 		});
 	});
-}
+};
 
 delBtn.forEach((button) => {
     button.addEventListener('click', (e) => {
         e.preventDefault()
-        const id = e.target.getAttribute("burgID");
+        const id = e.target.getAttribute("burgerId");
 
         fetch(`/api/burgers/${id}`, {
             method: 'DELETE',
@@ -73,4 +73,4 @@ delBtn.forEach((button) => {
             location.reload()
         })
     })
-})
+});
