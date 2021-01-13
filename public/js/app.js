@@ -1,19 +1,18 @@
 document.addEventListener("DOMContentLoaded", (event) => {
 	if (event) {
 		console.info("DOM loaded");
-    }
-    
+    }   
 });
 
 const addBtn = document.getElementById("addBtn");
-const eatBtn = document.getElementById("eatBtn");
+const eatBtn = document.querySelectorAll(".eatBtn")
 
 if(eatBtn) {
     if(eatBtn){
         eatBtn.forEach((button) => {
-            button.addEvenetListener('click', (e) => {
+            button.addEventListener('click', (e) => {
                 e.preventDefault();
-                const id = e.target.getAttrivute("burgId");
+                const id = e.target.getAttribute("burgId");
                 const devBurg = {devoured: true};
             
                 fetch(`/api/burgers/${id}`, {

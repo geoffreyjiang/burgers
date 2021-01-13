@@ -12,7 +12,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-body">
-                <h2 class="card-title">Burger Menu</h2>
+                <h2 class="card-title">Order Up!!</h2>
                 <ul class="left-text burgerMenu">
                     {{#each burgers}}
                     {{#unless devoured}}
@@ -26,8 +26,26 @@
             </div>
         </div>
 </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h2 class ="card-title">Burgers Eaten</h2>
+                <ul class="right-text burgerMenu">
+                    {{#each burgers}}
+                    {{#if this.devoured}}
+                    <li class="burgerList">
+                        {{burger_name}}
+                    </li>
+                    {{/if}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
   
-  
+
+
 <div class="row">
     <div class="d-flex justify-content-center">
         <h5>Add a Burger</h5>
@@ -47,7 +65,7 @@
                 </div>
             </div>
         </div>
-    </div>
 </div>
+
 
 

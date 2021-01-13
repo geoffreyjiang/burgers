@@ -18,8 +18,8 @@ const orm = {
         })
     },
 
-    updateOne(table, cols, vals, condition, cb) {
-        const query = `UPDATE ${table} set ${cols} = ${vals} where ${condition}`;
+    updateOne(table, condition, cb) {
+        const query = `UPDATE ${table} SET devoured = 1 WHERE ${condition};`;
         connection.query(query, (err, res) => {
             if (err) throw err;
             cb(res)
