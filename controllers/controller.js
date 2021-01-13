@@ -8,3 +8,8 @@ router.get('/', (req,res) => {
     })
 });
 
+router.post("/api/burgers", (req, res) => {
+	burger.insertOne(["burger_name"], [req.body.burger_name], (results) => {
+		res.json({ id: results.insertId });
+	});
+});
