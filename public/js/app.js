@@ -6,6 +6,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 const addBtn = document.getElementById("addBtn");
 const eatBtn = document.querySelectorAll(".eatBtn")
+const delBtn = document.querySelectorAll(".delBtn");
+
+
+
 
 if(eatBtn) {
     if(eatBtn){
@@ -57,3 +61,16 @@ if (addBtn) {
 		});
 	});
 }
+
+delBtn.forEach((button) => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault()
+        const id = e.target.getAttribute("burgID");
+
+        fetch(`/api/burgers/${id}`, {
+            method: 'DELETE',
+        }).then((res) => {
+            location.reload()
+        })
+    })
+})

@@ -24,7 +24,21 @@ const orm = {
             if (err) throw err;
             cb(res)
         })
+    },
+
+    deleteOne(table, condition, cb) {
+        const query = `DELETE FROM ${table} WHERE ${condition};`
+        connection.query(query, (err, res) => {
+            if (err) throw err;
+            cb(res)
+        })
     }
 }
+
+
+
+
+
+
 
 module.exports = orm;
