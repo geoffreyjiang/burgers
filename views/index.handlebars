@@ -17,7 +17,7 @@
                     {{#each burgers}}
                     {{#unless devoured}}
                     <li class="pb-2 burgerList">
-                        {{burger_name}}
+                        {{ burger_name }}
                         <button class="btn btn-primary eatBtn" burgId = "{{id}}" type="button">EAT</button>
                     </li>
                     {{/unless}}
@@ -25,6 +25,29 @@
                 </ul>
             </div>
         </div>
+</div>
+  
+  
+<div class="row">
+    <div class="d-flex justify-content-center">
+        <h5>Add a Burger</h5>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="card">
+                <div class="card-body">
+                    <form id="add-form">
+                        <div class="form-group">
+                            <input type="text" id="burgName">
+                        </div>
+                        <br>
+                        <div class="text-center">
+                            <button id="addBtn" type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 

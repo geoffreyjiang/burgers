@@ -27,3 +27,29 @@ if(eatBtn) {
         })
     }
 };
+
+const addBurgerBtn = document.getElementById("addBtn");
+
+if (addBurgerBtn) {
+	addBurgerBtn.addEventListener("submit", (e) => {
+		e.preventDefault();
+		const burgerName = document.getElementById("burgName").value.trim();
+		const addNewBurger = {burger_name: burgerName};
+        
+        fetch("/api/burgers", {
+			method: "POST",
+			headers: {
+				Accept: "application/json",
+                "Content-Type": "application/json",
+            },
+			body: JSON.stringify(addNewBurger),
+		}).then((response) => {
+			if (response.ok) {
+				console.log("Burger added!");
+				location.reload();
+			} else {
+				alert("Something went wrong!");
+			}
+		});
+	});
+}
