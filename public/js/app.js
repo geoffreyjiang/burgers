@@ -39,15 +39,14 @@ if (addBtn) {
 	addBtn.addEventListener("submit", (e) => {
 		e.preventDefault();
 		const burgerName = document.getElementById("burgName").value.trim();
-		const addNewBurger = {burger_name: burgerName};
-        
+		const newBurger = {burger_name: burgName};
         fetch("/api/burgers", {
 			method: "POST",
 			headers: {
 				Accept: "application/json",
                 "Content-Type": "application/json",
             },
-			body: JSON.stringify(addNewBurger),
+			body: JSON.stringify(newBurger),
 		}).then((response) => {
 			if (response.ok) {
 				console.log("Burger added!");
