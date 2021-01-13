@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }   
 });
 
-const addBtn = document.getElementById("addBtn");
+const addBtn = document.getElementById("add-form");
 const eatBtn = document.querySelectorAll(".eatBtn")
 const delBtn = document.querySelectorAll(".delBtn");
 
