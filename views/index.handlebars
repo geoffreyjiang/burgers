@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-12 text-center">
             <h1>BURGER ME</h1>
-            <img src="/assets/img/burger.png" alt="" style="width: 200px" id="burger-image">
+            {{!-- <img src="/assets/img/burger.png" alt="" style="width: 200px" id="burger-image"> --}}
         </div>
     </div>
 
@@ -18,7 +18,7 @@
                     {{#unless devoured}}
                     <li class="pb-2 burgerList">
                         {{ burger_name }}
-                        <button class="btn btn-primary eatBtn" burgId = "{{id}}" type="button">EAT</button>
+                        <button id= "eatBtn" class="btn btn-primary eatBtn" burgId = "{{id}}" type="button">EAT</button>
                     </li>
                     {{/unless}}
                     {{/each}}

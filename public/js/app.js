@@ -1,4 +1,12 @@
-const eatBtn = document.querySelector('#eatBtn')
+document.addEventListener("DOMContentLoaded", (event) => {
+	if (event) {
+		console.info("DOM loaded");
+    }
+    
+});
+
+const addBtn = document.getElementById("addBtn");
+const eatBtn = document.getElementById("eatBtn");
 
 if(eatBtn) {
     if(eatBtn){
@@ -28,10 +36,8 @@ if(eatBtn) {
     }
 };
 
-const addBurgerBtn = document.getElementById("addBtn");
-
-if (addBurgerBtn) {
-	addBurgerBtn.addEventListener("submit", (e) => {
+if (addBtn) {
+	addBtn.addEventListener("submit", (e) => {
 		e.preventDefault();
 		const burgerName = document.getElementById("burgName").value.trim();
 		const addNewBurger = {burger_name: burgerName};
