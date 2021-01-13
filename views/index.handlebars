@@ -9,16 +9,22 @@
 
 
 <div class="row">
-    <ul>
-        {{#each burgers}}
-        {{#unless devoured}}
-        {{/unless}}
-        {{/each}}
-    </ul>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">Burger Menu</h2>
+                <ul class="left-text burgerMenu">
+                    {{#each burgers}}
+                    {{#unless devoured}}
+                    <li class="pb-2 burgerList">
+                        {{burger_name}}
+                        <button class="btn btn-primary eatBtn" burgId = "{{id}}" type="button">EAT</button>
+                    </li>
+                    {{/unless}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
 </div>
 
-<form id="addBurger">
-    <h2>Add Burger</h2>
-    <input type="text" id="burgerName">
-    <button class="btn" id="burgerBtn">Add Burger</button>
-</form>
+
