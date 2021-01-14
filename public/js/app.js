@@ -44,6 +44,7 @@ if (addBtn) {
 		e.preventDefault();
 		const burgerName = document.getElementById("burgName").value.trim();
 		const newBurger = {burger_name: burgName};
+        
         fetch("/api/burgers", {
 			method: "POST",
 			headers: {
@@ -53,10 +54,10 @@ if (addBtn) {
 			body: JSON.stringify(newBurger),
 		}).then((response) => {
 			if (response.ok) {
-				console.log("Burger added!");
+				console.log("Burger Added!");
 				location.reload();
 			} else {
-				alert("Something went wrong!");
+				alert("Burger Not Added");
 			}
 		});
 	});

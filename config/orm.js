@@ -11,7 +11,7 @@ const orm = {
     },
     
     insertOne(table, cols, vals, cb) {
-        const query = `INSERT INTO ${table} (${cols}) (${vals})`;
+        const query = `INSERT INTO ${table} (${cols}) VALUES ('${vals}')`;
         connection.query(query, (err, res) => {
             if (err) throw err;
             cb(res)
@@ -34,11 +34,5 @@ const orm = {
         })
     }
 }
-
-
-
-
-
-
 
 module.exports = orm;

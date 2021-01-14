@@ -8,12 +8,12 @@ router.get('/', (req,res) => {
     })
 });
 
-router.post("/api/burgers", (req, res) => {
-	burger.insertOne(["burger_name"], [req.body.burger_name], (results) => {
-		res.json({ id: results.insertId });
-	});
+router.post('/api/burgers', (req, res) => {
+    burger.insertOne(['burger_name'], [req.body.burger_name], (data) => {
+        console.log(data)
+        res.json({ id: data.insertId })
+    });
 });
-
 router.put('/api/burgers/:id', (req, res) => {
     const condition = `id = ${req.params.id}`;
 
