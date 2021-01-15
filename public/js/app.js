@@ -42,7 +42,7 @@ if(eatBtn) {
 if (addBtn) {
 	addBtn.addEventListener("submit", (e) => {
 		e.preventDefault();
-		const burgerName = document.getElementById("burgName").value.trim();
+		const burgName = document.getElementById("burgName").value.trim();
 		const newBurger = {burger_name: burgName};
         
         fetch("/api/burgers", {
