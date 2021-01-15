@@ -19,7 +19,9 @@
   ## Usage:
     Type out a burger, click eat, then delete
   ## Tests
-     
+
+  <img src"/public/imgs/burger.gif">
+
   ## Contributors
     Geoffrey Jiang Victor Tran  
   ## License
